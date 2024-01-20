@@ -8,16 +8,16 @@ namespace Homework1.Task4
     public abstract class ButtonBase : MonoBehaviour
     {
         protected UI _ui;
-        protected Example _example;
+        protected ConditionSwitcher _conditionSwitcher;
         
         protected bool _isInit = false;
 
         private Button _button;
 
-        public void Initialize(UI ui, Example example) 
+        public void Initialize(UI ui, ConditionSwitcher conditionSwitcher) 
         {
             _ui = ui;
-            _example = example;
+            _conditionSwitcher = conditionSwitcher;
 
             _isInit = true;
         }

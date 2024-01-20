@@ -2529,7 +2529,7 @@ GameObject:
   - component: {fileID: 1403298256}
   - component: {fileID: 1403298255}
   m_Layer: 0
-  m_Name: Example
+  m_Name: Bootstrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2547,6 +2547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1ff03692b2c14458ee9199a8e1e58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clicker: {fileID: 2118447492}
+  _ui: {fileID: 2053166615}
   _balls:
   - {fileID: 614190400}
   - {fileID: 416869933}
@@ -3669,7 +3671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414cb4f9d24d4e547988b8513aaab70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _example: {fileID: 1403298255}
   _textGameModeInfo: {fileID: 360145726}
   _buttons:
   - {fileID: 1937686066}
@@ -3702,7 +3703,7 @@ GameObject:
   - component: {fileID: 2118447491}
   - component: {fileID: 2118447492}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Clicker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3746,6 +3747,6 @@ SceneRoots:
   - {fileID: 1777050419}
   - {fileID: 1759487930}
   - {fileID: 1403298256}
-  - {fileID: 2053166616}
   - {fileID: 2118447491}
+  - {fileID: 2053166616}
   - {fileID: 494716518}

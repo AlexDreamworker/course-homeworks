@@ -10,7 +10,7 @@ namespace Homework1.Task4
         {
             base.ButtonCallback();
                 
-            _example.SetGameModeDestroyConcreteColor(TARGET_COLOR);
+            _conditionSwitcher.SetDestroyConcreteColor(TARGET_COLOR);
             _ui.ChangeGameModeInfo("GAME MODE: DESTROY RED");
 
             Debug.Log("Game Mode is: Destroy Red!");

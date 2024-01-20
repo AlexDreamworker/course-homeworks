@@ -1,36 +1,39 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace Homework1.Task4 
 {
-    public class DestroyConcreteColor : IVictoryCondition
+    public class DestroyConcreteColor : VictoryCondition
     {
         private ColorType _targetColor;
 
-        public DestroyConcreteColor(ColorType type) 
-        {
+        private bool _isWrongColor = false;
+
+        public DestroyConcreteColor(List<Ball> balls, ColorType type) : base(balls) 
+        { 
             _targetColor = type;
         }
 
-        public bool CheckCondition(List<Ball> balls)
+        public override event Action Completed;
+
+        protected override void CheckCondition(IReadOnlyBall ball)
         {
-            bool result = false;
+            if (_isWrongColor)
+                return;
 
-            var targetBalls = balls.Where(ball => ball.IsActive && ball.ColorType == _targetColor);
-            var otherBalls = balls.Where(ball => ball.IsActive == false && ball.ColorType != _targetColor);
-
-            if (otherBalls.Count() > 0) 
+            if (ball.ColorType != _targetColor) 
             {
-                Debug.Log("<color=red>You destroy wrong ball! Try again...</color>");
-                result = false;
-            }
-            else if (targetBalls.Count() == 0 && otherBalls.Count() == 0) 
-            {
-                result = true;
+                _isWrongColor = true;
+                Debug.Log("<color=red>You destroy wrong ball! Try again...</color>");;
+                return;
             }
 
-            return result;
+            var targetBalls = _balls.Where(ball => ball.IsActive && ball.ColorType == _targetColor);
+
+            if (targetBalls.Count() == 0)
+                Completed?.Invoke();
         }
     }
 }

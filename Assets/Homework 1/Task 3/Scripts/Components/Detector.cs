@@ -1,15 +1,19 @@
+using System;
 using UnityEngine;
 
 namespace Homework1.Task3 
 {
-    public class RaceChanger : MonoBehaviour
+    [RequireComponent(typeof(Collider))]
+    public class Detector : MonoBehaviour
     {
+        public event Action<RaceType, IRace> TriggerDetected;
+
         [SerializeField] private RaceType _typeToChange;
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out IRace race)) 
-                race.SetNewRace(_typeToChange);
+                TriggerDetected?.Invoke(_typeToChange, race);
         }
     }
 }

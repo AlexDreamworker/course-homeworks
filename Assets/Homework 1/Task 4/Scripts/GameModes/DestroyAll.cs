@@ -1,13 +1,19 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Homework1.Task4 
 {
-    public class DestroyAll : IVictoryCondition
-    {
-        public bool CheckCondition(List<Ball> balls)
+    public class DestroyAll : VictoryCondition
+    {   
+        public DestroyAll(List<Ball> balls) : base(balls) { }
+
+        public override event Action Completed;
+
+        protected override void CheckCondition(IReadOnlyBall ball)
         {
-            return balls.All(ball => ball.IsActive == false);
+            if (_balls.All(ball => ball.IsActive == false)) 
+                Completed?.Invoke();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Homework1.Task4
         {
             base.ButtonCallback();
 
-            _example.SetGameModeDestroyAll();
+            _conditionSwitcher.SetDestroyAll();
             _ui.ChangeGameModeInfo("GAME MODE: DESTROY ALL");
 
             Debug.Log("Game Mode is: Destroy All!");
