@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Homework1.Task4 
 {
@@ -11,6 +12,9 @@ namespace Homework1.Task4
         {
             _level = level;
             _balls = balls;
+
+            SetDestroyAll();
+            Debug.Log("Game Mode is: Destroy All!");
         }
 
         public void SetDestroyAll() 

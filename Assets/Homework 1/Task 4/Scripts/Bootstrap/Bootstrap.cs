@@ -22,8 +22,6 @@ namespace Homework1.Task4
             _level = new Level();
             _conditionSwitcher = new ConditionSwitcher(_level, _balls);
             _ui.Initialize(_conditionSwitcher);
-
-            Debug.Log("Game Mode is: Destroy All!");
         }
 
         private void Update() => _inputReader.UpdateUserInput();
