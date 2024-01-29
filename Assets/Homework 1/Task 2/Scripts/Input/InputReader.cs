@@ -19,7 +19,7 @@ namespace Homework1.Task2
             if (Input.GetAxis(_mouseScrollWheelKey) > 0f) 
                 PreviousWeaponChanged?.Invoke();
 
-            if (Input.GetMouseButtonDown(0)) 
+            if (Input.GetMouseButtonDown(0))
                 ShootButtonChanged?.Invoke();
         }
     }
