@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Homework2.Task4
 {
-    [CreateAssetMenu(menuName = "Configs/PlayerConfig", fileName = "PlayerConfig")]
+    [CreateAssetMenu(fileName = "PlayerConfig", menuName = "HW2-T4/Player/PlayerConfig")]
     public class PlayerConfig : ScriptableObject
     {
         [SerializeField, Range(0, 100)] private int _health = 100;
