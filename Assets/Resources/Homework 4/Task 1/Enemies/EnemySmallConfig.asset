@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55eb4623164893049b6eb21c14d1798a, type: 3}
+  m_Name: EnemySmallConfig
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 8231117478742454163, guid: 115b0c30f4c7fcd46b51db520fdec802, type: 3}
+  _health: 2
+  _speed: 9
