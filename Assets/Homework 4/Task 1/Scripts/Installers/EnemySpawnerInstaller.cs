@@ -30,12 +30,12 @@ namespace Homework4.Task1
 
         private void BindConfigs() 
         {
-            Container.Bind<EnemySpawnPoints>().FromInstance(_enemySpawnPoints).AsSingle();
+            Container.Bind<EnemySpawnerConfig>().FromInstance(_enemySpawnerConfig).AsSingle();
         }
 
         private void BindSpawnPoints() 
         {
-            Container.Bind<EnemySpawnerConfig>().FromInstance(_enemySpawnerConfig).AsSingle();
+            Container.Bind<EnemySpawnPoints>().FromInstance(_enemySpawnPoints).AsSingle();
         }
 
         private void BindSpawner() 
